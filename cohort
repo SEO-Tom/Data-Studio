@@ -1,0 +1,8 @@
+# Cohort pages
+
+Group URLs by patterns
+`CASE
+  WHEN REGEXP_MATCH(Landing Page, ".*/example/.*") THEN "Example Pages" // Match pattern driven URL
+  WHEN REGEXP_MATCH(Landing Page, "^/(product-1|product-2)/$") THEN "Deals Pages" // Match multiple URL patterns
+  ELSE "Misc"
+END`
